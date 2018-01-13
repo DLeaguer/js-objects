@@ -70,6 +70,18 @@ console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to "
   Console.log the object.
 */
 
+console.log('');
+console.log('3. An empty object: ');
+console.log('');
+
+var kicks = {}
+
+kicks.brand = "Nike";
+kicks.color = "red";
+kicks.size = 9;
+kicks.buy = "Hell Yeah!";
+
+console.log(kicks);
 
 /* 
 
@@ -82,6 +94,17 @@ console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to "
   console.log the object
 */
 
+console.log('');
+console.log('4. plainBox: ');
+console.log('');
+
+var plainBox = {}
+
+plainBox.color = "blue";
+plainBox.size = 15;
+plainBox.contents = [];
+
+console.log(plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -94,6 +117,19 @@ console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to "
     console.log the object
 */
 
+console.log('');
+console.log('5. stockCar: ');
+console.log('');
+
+var stockCar = {
+  model: "Chevrolet",
+  year: 2015,
+  automaticTransmission: true,
+  driver: null,
+  passengers: [] 
+}
+
+console.log(stockCar);
 
 /*
 
@@ -112,6 +148,19 @@ console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to "
    the value at `name`, and just the value at `age`.
  */
 
+console.log('');
+console.log('6. plainPerson: ');
+console.log('');
+
+var plainPerson = {};
+
+function buildPerson(person, nameString, age){
+  return obj.name = nameString;
+  obj.age = age;
+  person;
+}
+
+buildPerson(plainPerson, "Jan", 32);
 
 /*
 7. Display values of objects that are inside an array
