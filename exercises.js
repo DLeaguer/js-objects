@@ -15,7 +15,7 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     Console.log the object.
 */
 console.log('');
-console.log('1. A literal object: ');
+console.log('       1. A literal object: ');
 console.log('');
 
 var books = {
@@ -43,7 +43,7 @@ console.log(books);
 */ 
 
 console.log('');
-console.log('2. Dog: ');
+console.log('       2. My dog: ');
 console.log('');
 
 var dog = {
@@ -71,7 +71,7 @@ console.log("My dog " + dog.name + " is " + dog.age + " years old and likes to "
 */
 
 console.log('');
-console.log('3. An empty object: ');
+console.log('       3. An empty object: ');
 console.log('');
 
 var kicks = {}
@@ -95,7 +95,7 @@ console.log(kicks);
 */
 
 console.log('');
-console.log('4. plainBox: ');
+console.log('       4. plainBox: ');
 console.log('');
 
 var plainBox = {}
@@ -118,7 +118,7 @@ console.log(plainBox);
 */
 
 console.log('');
-console.log('5. stockCar: ');
+console.log('      5. stockCar: ');
 console.log('');
 
 var stockCar = {
@@ -149,7 +149,7 @@ console.log(stockCar);
  */
 
 console.log('');
-console.log('6. plainPerson: ');
+console.log('      6. plainPerson: ');
 console.log('');
 
 var plainPerson = {};
@@ -166,6 +166,14 @@ var completePerson = plainPerson;
 console.log(completePerson);
 console.log(completePerson.name);
 console.log(completePerson.age);
+
+/*
+6. plainPerson:
+
+{ name: 'Jan', age: 32 }
+Jan
+32
+*/
 
 /*
 7. Display values of objects that are inside an array
@@ -194,7 +202,7 @@ console.log(completePerson.age);
 
 
 console.log('');
-console.log('7. Display Array: ');
+console.log('      7. Display Array: ');
 console.log('');
 
 var arrayOfObjects = [
@@ -250,15 +258,18 @@ var arrayOfObjects = [
   }
 ]
 
-
 function printOrders(orders){
   for (var i = 0; i < orders.length; i++){
-    // console.log(orders[i]);
+    console.log('=====');
+    console.log("id: " + orders[i].id);
+    console.log("purchase date: " + orders[i].date);
+    console.log("purchase total: " + orders[i].total);
+
   }
 }
 
 printOrders(arrayOfObjects);
-console.log(arrayOfObjects);
+// console.log(arrayOfObjects);
 
 
 /*
@@ -274,6 +285,21 @@ console.log(arrayOfObjects);
         to inspect your results.
 */
 
+console.log('');
+console.log('      8. Addition with an object: ');
+console.log('');
+
+var sumObj = {}
+  
+function objectAddition(sum, a, b){
+  sum.a = a;
+  sum.b = b;
+  sum.result = a + b;
+  return sum;
+  // console.log(sum); 
+}
+objectAddition(sumObj, 10, 5);
+console.log(sumObj);
 
 /*
 9. Print sum function and add as new key-value
@@ -292,6 +318,23 @@ console.log(arrayOfObjects);
         **create more** objects and invoke your function multiple times.
  */
 
+console.log('');
+console.log('      9. Print sum function and add as new key-value: ');
+console.log('');
+
+
+function printObj(sumObj){
+  var sumTot =  sumObj.a  + " + " + sumObj.b + " = " + sumObj.result;
+  sumObj.output = sumTot;
+  // return sumTot;
+  console.log(sumTot);
+  // console.log(sumObj);
+}
+// var sumTot =  sumObj.a  + " + " + sumObj.b + " = " + sumObj.result;
+
+printObj(objectAddition(sumObj, 4, 3));
+// console.log(sumObj);
+// console.log(sumTot);
 
 /*
 10. Putting stuff in `plainBox`
@@ -302,6 +345,7 @@ console.log(arrayOfObjects);
         Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
         plainBoxResult and use `console.log` to inspect your results.
  */
+
 
 
 /*
