@@ -381,40 +381,14 @@ function putInPlainBox(box){
 
   for (var i = 0; i<=10; i++){
     // console.log(i);
-    box.contents += i; //pyramid
-    // console.log(box.contents); //pyramid 1-10
-    // box.contents[i] += i; //NaN pyramid
-    // box.contents[i] += [i]; //contents: [undefined1-10]
-    // console.log(box.contents); //pyramid 1-10
-    // console.log(box.contents[i]); //list 1-10 downwards
-    // console.log(i); //list 1-10 downwards
-    // box.contents += box; //[objetct object] pyramid
-    console.log(box);
+    box.contents += [i + ", "];
+    // console.log(box.contents);
+    box.plainBoxResult += i;
+    // console.log(box.plainBoxResult);
   }
 }
 putInPlainBox(plainBox);
 console.log(plainBox);
-
-// var plainBox = {}
-
-// function putInPlainBox(box){
-//   box.contents = [];
-//   box.plainBoxResult = 0;
-
-//   for (var i = 0; i<11; i++){
-//     box.contents += [i];
-//     // console.log(i);
-//     var plainBoxResult = box.contents[i] + i;
-//     // console.log(plainBoxResult);
-//     box.plainBoxResult = plainBoxResult;
-//     // box.contents[i].split("");
-//     // box.plainBoxResult += box.contents;
-//     // console.log(box.contents);
-//     // return box;
-//   }
-// }
-// putInPlainBox(plainBox);
-// console.log(plainBox);
 
 /*
 11. Detecting transmission
@@ -510,3 +484,13 @@ console.log(stockCar);
         'Marifel, age 19, is riding dirty!'
         'Victor, age 19, is riding dirty!'
  */
+
+console.log('');
+console.log('       13. Final Boss. The Dev League instructors want to ride your whip!');
+console.log('');
+
+
+
+
+
+
