@@ -295,8 +295,12 @@ function objectAddition(sum, a, b){
   sum.a = a;
   sum.b = b;
   sum.result = a + b;
+  var sumObjResult = sum.result;
+  // console.log(sumObjResult);
+  // console.log(sum);
   return sum;
-  // console.log(sum); 
+  // console.log(sumObjResult); //does nothing because of return
+  // console.log(sum); //does nothing because of return
 }
 objectAddition(sumObj, 10, 5);
 console.log(sumObj);
@@ -333,6 +337,24 @@ function printObj(sumObj){
 // var sumTot =  sumObj.a  + " + " + sumObj.b + " = " + sumObj.result;
 
 printObj(objectAddition(sumObj, 4, 3));
+printObj(objectAddition(sumObj, 8, 2));
+// printObj(sumObj, 15, 5);
+printObj(objectAddition(sumObj, 15, 5));
+
+var mySum = {}
+printObj(objectAddition(mySum, 22, 23));
+
+var sumSum = {
+  a: 44,
+  b: 45, 
+  // result: a + b,
+  // sumTot: 0,
+  // output: 0
+}
+printObj(sumSum);
+
+
+
 // console.log(sumObj);
 // console.log(sumTot);
 
@@ -375,6 +397,27 @@ console.log(plainBox);
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+console.log('');
+console.log('       11. Detecting transmission: ');
+console.log('');
+
+var autoTrans = {}
+
+function detectingTransmission(trans){
+  var isAutomaticTransmission = trans;
+  
+  if (stockCar.automaticTransmission === true){
+    // return "Your car has an automatic transmission.";
+    console.log("Your car has an automatic transmission.");
+    // console.log(trans);
+    console.log(autoTrans);
+  }else{
+    return "Your car has a manual transmission.";
+  }
+}
+detectingTransmission(stockCar);
+console.log(stockCar);
+console.log(autoTrans);
 
 /*
 12.  Who's driving this thing?!
