@@ -405,19 +405,25 @@ var autoTrans = {}
 
 function detectingTransmission(trans){
   var isAutomaticTransmission = trans;
+  // stockCar.automaticTransmission = false; //changes auto to manual
   
   if (stockCar.automaticTransmission === true){
     // return "Your car has an automatic transmission.";
     console.log("Your car has an automatic transmission.");
     // console.log(trans);
-    console.log(autoTrans);
+    // console.log(autoTrans);
   }else{
-    return "Your car has a manual transmission.";
+    // return "Your car has a manual transmission.";
+    console.log("Your car has a manual transmission.");
   }
+  // console.log(trans); //shows stockCar obj
 }
 detectingTransmission(stockCar);
-console.log(stockCar);
-console.log(autoTrans);
+// console.log(autoTrans); //shows empty obj
+
+
+// console.log(stockCar);
+// console.log(autoTrans);
 
 /*
 12.  Who's driving this thing?!
@@ -430,6 +436,11 @@ console.log(autoTrans);
      Invoke your function and pass in your objects, store the result to a variable named stockCarWithDriver, and inspect 
       your results. Consider using `plainPerson` as your driver.
  */
+
+console.log('');
+console.log("       12. Who's driving this thing?!: ");
+console.log('');
+
 
 
 /*
