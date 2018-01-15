@@ -346,7 +346,23 @@ printObj(objectAddition(sumObj, 4, 3));
         plainBoxResult and use `console.log` to inspect your results.
  */
 
+console.log('');
+console.log('       10. Putting stuff in "plainBox": ');
+console.log('');
 
+var plainBox = {}
+
+function putInPlainBox(box){
+  box.contents = [];
+
+  for (var i = 0; i<=10; i++){
+    // console.log(i);
+    // return box;
+    box.plainBoxResult = 0;
+  }
+}
+putInPlainBox(plainBox);
+console.log(plainBox);
 
 /*
 11. Detecting transmission
