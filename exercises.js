@@ -375,16 +375,46 @@ console.log('');
 var plainBox = {}
 
 function putInPlainBox(box){
+  var plainBoxResult = 0;
   box.contents = [];
+  box.plainBoxResult = 0;
 
   for (var i = 0; i<=10; i++){
     // console.log(i);
-    // return box;
-    box.plainBoxResult = 0;
+    box.contents += i; //pyramid
+    // console.log(box.contents); //pyramid 1-10
+    // box.contents[i] += i; //NaN pyramid
+    // box.contents[i] += [i]; //contents: [undefined1-10]
+    // console.log(box.contents); //pyramid 1-10
+    // console.log(box.contents[i]); //list 1-10 downwards
+    // console.log(i); //list 1-10 downwards
+    // box.contents += box; //[objetct object] pyramid
+    console.log(box);
   }
 }
 putInPlainBox(plainBox);
 console.log(plainBox);
+
+// var plainBox = {}
+
+// function putInPlainBox(box){
+//   box.contents = [];
+//   box.plainBoxResult = 0;
+
+//   for (var i = 0; i<11; i++){
+//     box.contents += [i];
+//     // console.log(i);
+//     var plainBoxResult = box.contents[i] + i;
+//     // console.log(plainBoxResult);
+//     box.plainBoxResult = plainBoxResult;
+//     // box.contents[i].split("");
+//     // box.plainBoxResult += box.contents;
+//     // console.log(box.contents);
+//     // return box;
+//   }
+// }
+// putInPlainBox(plainBox);
+// console.log(plainBox);
 
 /*
 11. Detecting transmission
@@ -401,20 +431,20 @@ console.log('');
 console.log('       11. Detecting transmission: ');
 console.log('');
 
-var autoTrans = {}
+// var autoTrans = {}
 
 function detectingTransmission(trans){
   var isAutomaticTransmission = trans;
   // stockCar.automaticTransmission = false; //changes auto to manual
   
   if (stockCar.automaticTransmission === true){
-    // return "Your car has an automatic transmission.";
-    console.log("Your car has an automatic transmission.");
+    // return "Y"ur car has an automatic transmission.";
+    console.log('Your car has an "automatic" transmission.');
     // console.log(trans);
     // console.log(autoTrans);
   }else{
-    // return "Your car has a manual transmission.";
-    console.log("Your car has a manual transmission.");
+    // return "Yur car has a manual transmission.";
+    console.log('Your car has a "manual" transmission.');
   }
   // console.log(trans); //shows stockCar obj
 }
@@ -441,7 +471,12 @@ console.log('');
 console.log("       12. Who's driving this thing?!: ");
 console.log('');
 
-
+function addDriver(car, person){
+  stockCar.driver = person;
+  // console.log(person);
+}
+addDriver(stockCar, plainPerson);
+console.log(stockCar);
 
 /*
     #Final Boss
