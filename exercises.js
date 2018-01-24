@@ -154,26 +154,22 @@ console.log('');
 
 var plainPerson = {};
 
+  var completePerson = "";
 function buildPerson(person, nameString, age){
   person.name = nameString;
   person.age = age;
-  // return person;
+  return person;
+  completePerson.push(person);
 }
+  console.log(completePerson);
+
 
 buildPerson(plainPerson, "Jan", 32);
-// plainPerson.color = "Jon";
-// plainPerson.age = 28;
-// plainPerson.name = "Jason";
-// plainPerson.age = 35;
-// plainPerson.name = "Joe";
-// plainPerson.age = 33;
-// plainPerson.name = "Jesse";
-// plainPerson.age = 30;
-// var completePerson = plainPerson;
-// console.log(completePerson);
+
 console.log(plainPerson);
-// console.log(completePerson.name);
-// console.log(completePerson.age);
+console.log(plainPerson.name);
+console.log(plainPerson.age);
+
 
 /*
 6. plainPerson:
@@ -502,42 +498,40 @@ var passengerList = ['Jon', 'Jason', 'Tony', 'Joe', 'Jesse', 'Nigel', 'Kelli', '
 var passengerAges = [19, 12, 21, 22, 16, 9, 19, 20, 15];
 
 function addPassengers(car, names, ages){
-  
-  for (var i = 0; i < 9; i++){
-  // stockCar.passengerList = names;
-  // stockCar.passengerAges = ages;
-    // console.log(i);
-    names.i += i;
-    // console.log(names[i]);
-    ages.i += i;
-    // console.log(ages[i]);
-    var nameAge = (names[i] + ", " + ages[i] + ", is driving dirty!");
-    // console.log(stockCar.passengers = nameAge);
-    stockCar.passengers = nameAge;
-    console.log(nameAge);
+  for (var i = 0; i < names.length; i++){
+    var allPerson = {}
+    buildPerson(allPerson, names[i], ages[i]);
+    car.passengers.push(allPerson);
+    // console.log(car.passengers);
+    
   }
-    // console.log(stockCar);
-  // stockCar.passengers = stockCar.passengerList + ", " + passengerAges + ", is riding dirty!";
-    // console.log(stockCar.passengers = nameAge);
+  return car;
 }
-addPassengers(stockCar, passengerList, passengerAges);
-console.log(stockCar);
-
-console.log('');
-console.log('       14. loaded car: ');
-console.log('');
+console.log(addPassengers(stockCar, passengerList, passengerAges));
+// cSonsole.log(stockCar);
 
 function displayPassengers(car){
-  for (var i = 0; i < 9; i++){
-    // console.log(i);
-    passengerList.i += i;
-    passengerAges.i += i;
-  console.log(passengerList[i] + ", " + passengerAges[i] + ", is driving dirty!");
-    // console.log(passengerList);
-    // console.log(passengerAges);
-  }
+ for (var i = 0; i < car.passengers.length; i++){
+  console.log(car.passengers[i].name + ", age " + car.passengers[i].age + ", is riding dirty!");
+ }   
+
 }
 displayPassengers(stockCar);
+
+// console.log('');
+// console.log('       14. loaded car: ');
+// console.log('');
+
+//   for (var i = 0; i < 9; i++){
+//     // console.log(i);
+//     passengerList.i += i;
+//     passengerAges.i += i;
+//   console.log(passengerList[i] + ", " + passengerAges[i] + ", is driving dirty!");
+//     // console.log(passengerList);
+//     // console.log(passengerAges);
+//   }
+// }
+// displayPassengers(stockCar);
 
 // function addPassengers(car, names, ages){
 //   // stockCar.passengers = plainPerson.nameAge;
