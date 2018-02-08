@@ -286,6 +286,7 @@ function printObj(obj){
 }
 
 console.log(printObj(sumObj));
+
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
